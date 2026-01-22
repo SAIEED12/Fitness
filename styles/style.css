@@ -263,6 +263,46 @@ span{
     border: 1px solid white;
     cursor: pointer;
 }
+.team-text{
+    margin-bottom: 60px;
+}
+.photo-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 100px;
+    border-radius: 18px;
+
+}
+.photo-container img{
+    width: 360px;
+    height: 250px;
+    border-radius: 18px;
+}
+.photo-container>div{
+    position: relative;
+}
+.photo-container h5, 
+.photo-container p {
+    position: absolute;
+    margin: 0;
+    left: 20px;
+    line-height: 1.2;
+}
+
+.photo-container h5 {
+    bottom: 60px;    
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.photo-container p {
+    bottom: 40px;      
+    font-size: 0.9rem;
+}
+
 /* Responsive */
 
 /* Small Device */
@@ -397,6 +437,27 @@ span{
         width: 100%;
         margin-bottom: -100px;
     }
+    .photo-container {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .photo-container img{
+        width: 280px;
+        height: 250px;
+    }
+    .pbox-1{
+        display: none;
+    }
+    .pbox-4{
+        display: none;
+    }
+    .photo-container h5 {
+        bottom: 35px;
+    }
+
+    .photo-container p {
+        bottom: 15px; 
+    }
 }
 /* Medium Device */
  @media screen and (min-width: 576px) and (max-width: 992px){
@@ -495,5 +556,29 @@ span{
         background-color:#111111;
         color: #FFFFFF;
         font-weight: 600;
+    }
+    .photo-container {
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 15px;
+        padding: 20px;
+        justify-items: center;
+        max-width: 95%; 
+        margin: 0 auto;
+        margin-bottom: 100px;
+
+    }
+    .photo-container img {
+        width: 100%;
+        height: 220px;
+        border-radius: 18px;
+    }
+
+    .photo-container h5 {
+        bottom: 45px;
+        left: 15px;
+    }
+    .photo-container p {
+        bottom: 20px;
+        left: 15px;
     }
 }
