@@ -6,11 +6,19 @@ body{
     padding: 0;
     box-sizing: border-box;
     background-color: #111111;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.primary-color{
+    color: #FFFFFF;
+}
+
+.secondary-color{
+    color: dimgray;
 }
 
 nav{
     display: flex;
-    max-width: 1200px;
     justify-content: space-between;
     margin: 0 auto;
 }
@@ -49,9 +57,6 @@ span{
 
 .banner-container{
     display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
-
 }
 .banner-left{
     width: 50%;
@@ -158,6 +163,15 @@ span{
     mix-blend-mode: multiply
 }
 
+.habit-heading{
+    text-align: center;
+    margin-top: 100px;
+}
+.habit-heading p{
+    width: 671px;
+    margin: 0 auto;
+}
+
 .Box-2{
 
     /* 2 number line theke shuru hoye aro 2 column porjonto jayga nibe  */
@@ -207,7 +221,17 @@ span{
     top: 60%;
     left: 15%;
 }
-
+.card-container{
+    display: flex;
+    justify-content: space-around;
+    gap: 150px;
+    margin-bottom: 100px;
+}
+.card-container img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
 
 /* Responsive */
 
@@ -293,6 +317,25 @@ span{
     .Box-3,.Box-6{
         display: none;
     }
+    .card-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 36px;
+    }
+    .card-container img{
+        width: 200px;
+        height: 200px;
+        margin-left: 10px;
+    }
+    .card-container p{
+        width: 231px;
+    }
+    .habit-heading p{
+        width: 338px;
+        line-height: 24px;
+    }
 }
 
 /* Medium Device */
@@ -301,12 +344,11 @@ span{
         max-width: 92%;
         margin: 0 auto;
     }
-    .nav-container{
-        margin-right: 30px;
-    }
-
-    .Fitness{
-        margin-left: 30px;
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px; 
     }
 
     .banner-container{
@@ -329,5 +371,32 @@ span{
 
     .banner-right>img{
         width: 100%;
+    }
+    .card-container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        gap: 20px;
+        padding: 50px 0px;
+        margin-left: 10px;
+    }
+    .card-container img{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-left: 100px;
+    }
+    .card-container p{
+        width: 290px;
+        margin-left: 30px;
+    }
+
+    .habit-heading{
+        width: 476px;
+        margin: 0 auto;
+    }
+    .habit-heading p{
+        width: 495px;
+        line-height: 24px;
     }
  }
