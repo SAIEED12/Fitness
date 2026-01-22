@@ -39,6 +39,7 @@ li{
     padding: 8px 20px 8px 20px;;
     border-radius: 30px;
     font-weight: 600;
+    cursor: pointer;
 }
 span{
     color: rgba(255, 255, 255, 1);
@@ -80,8 +81,13 @@ span{
     border: none;
     color: #FFFFFF;
     font-weight: 600;
+    cursor: pointer;
 }
-
+.btn-join:hover{
+    background-color: #9797979d;
+    color: white;
+    border: 1px solid white;
+}
 .btn-download {
     color: #FFFFFF;
     background-color: transparent;
@@ -89,8 +95,13 @@ span{
     border-radius: 42px;
     padding: 16px 30px;
     font-weight: 600;
+    cursor: pointer;
 }
-
+.btn-download:hover{
+    background-color: #9797979d;
+    color: white;
+    border: 1px solid white;
+}
 .tooltip {
     position: absolute;
     background: rgba(255, 255, 255, 0.1);
@@ -133,11 +144,79 @@ span{
     background-color: #E6533C;
 }
 
+.grid-container{
+    max-width: 1200px;
+    min-height: 300px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2,200px);
+}
+.grid-container img{
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply
+}
+
+.Box-2{
+
+    /* 2 number line theke shuru hoye aro 2 column porjonto jayga nibe  */
+    grid-column: 2 /span 2;  
+}
+
+.Box-4{
+    /* 1 number line theke shuru hoye 3 number line porjonto jayga nibe */
+    grid-column: 1/3;
+}
+
+.training-heading{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.grid-container>div{
+    position: relative;
+}
+.grid-container p{
+    position: absolute;
+    margin: 0;
+    padding: 15px;
+    font-weight: 900;
+}
+
+.Box-1>p{
+    top: 65%;
+    left: -2%;
+}
+.Box-2>p{
+    top: 5%;
+    left: 5%;
+}
+.Box-3>p{
+    top: 70%;
+    left: 6%;
+}
+.Box-4>p{
+    top: 5%;
+    left: 52%;
+}
+.Box-5>p{
+    top: 60%;
+    left: 15%;
+}
+.Box-6>p{
+    top: 60%;
+    left: 15%;
+}
 
 
 /* Responsive */
+
 /* Small Device */
 @media screen and (max-width:576px) {
+    body{
+        max-width: 92%;
+        margin: 0 auto;
+    }
     .nav-container{
         display: none;
     }
@@ -157,7 +236,7 @@ span{
     }
     .banner-left{
         width: 100%; 
-        max-width: 350px; 
+        width: 352px;
         margin: 0 auto;
         text-align: left;
     }
@@ -165,6 +244,7 @@ span{
         font-size: 36px;
         line-height: 1.1;
         margin-bottom: 15px;
+        
     }
     .banner-right>img{
         width: 100%;
@@ -195,11 +275,32 @@ span{
         margin: 0;
         font-size: 18px;
     }
+    .training-heading{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 
+
+    .grid-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .Box-2{
+        grid-column: auto;
+    }
+    .Box-4{
+        grid-column: auto;
+    }
+    .Box-3,.Box-6{
+        display: none;
+    }
 }
 
 /* Medium Device */
  @media screen and (min-width: 576px) and (max-width: 992px){
+    body{
+        max-width: 92%;
+        margin: 0 auto;
+    }
     .nav-container{
         margin-right: 30px;
     }
@@ -211,5 +312,22 @@ span{
     .banner-container{
         flex-direction: column;
     }
-    
+
+    .banner-left{
+        width: 100%; 
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .banner-right{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        margin-bottom: 111px;
+    }
+
+    .banner-right>img{
+        width: 100%;
+    }
  }
