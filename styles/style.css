@@ -232,7 +232,37 @@ span{
     height: 200px;
     border-radius: 50%;
 }
-
+.run-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(34, 34, 34, 1);
+    padding: 30px;
+    border-radius: 18px;
+    gap: 170px;
+    margin-bottom: 100px;
+}
+.run-left{
+    width: 50%;
+}
+.run-container img{
+    width: 366px;
+    height: 312px;
+    border-radius: 18px;
+}
+.join-btn{
+    border: none;
+    border-radius: 42px;
+    padding: 16px 70px;
+    background-color:rgba(230, 83, 60, 1);
+    color: #FFFFFF;
+    font-weight: 600;
+}
+.join-btn:hover{
+    background-color: rgba(17, 17, 17, 1);
+    border: 1px solid white;
+    cursor: pointer;
+}
 /* Responsive */
 
 /* Small Device */
@@ -336,8 +366,38 @@ span{
         width: 338px;
         line-height: 24px;
     }
+    .run-container{
+        flex-direction: column;
+    }
+        .join-btn{
+        padding: 16px 40px;
+        margin-bottom: 45px ;
+    }
+    .join-btn:hover{
+        border: none;
+        border-radius: 42px;
+        padding: 16px 40px;
+        background-color:#111111;
+        color: #FFFFFF;   
+    }
+    .run-left h1{
+        width: 300px;
+    }
+    .run-left p{
+        width: 287px;
+    }
+    .run-left{
+        width: 100%;
+    }
+    .join-btn{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        margin-bottom: -100px;
+    }
 }
-
 /* Medium Device */
  @media screen and (min-width: 576px) and (max-width: 992px){
     body{
@@ -399,4 +459,41 @@ span{
         width: 495px;
         line-height: 24px;
     }
- }
+    .run-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(34, 34, 34, 1);
+        padding: 10px;
+        gap: 210px;
+        width: 700px;
+    }
+    .run-container img{
+        width: 256px;
+        height: 319px;
+    }
+    .run-left{
+        width: 20%;
+        margin-left: 2  1px;
+    }
+    .run-left p{
+        width: 263px;
+        font-size: 14px;
+    }
+    .run-left h1{
+        font-size: 32px;
+        width: 300px;
+    }
+    .join-btn{
+        padding: 16px 40px;
+        margin-bottom: 45px ;
+    }
+    .join-btn:hover{
+        border: none;
+        border-radius: 42px;
+        padding: 16px 40px;
+        background-color:#111111;
+        color: #FFFFFF;
+        font-weight: 600;
+    }
+}
